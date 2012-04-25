@@ -3,5 +3,13 @@ File Specifications for the assignment
 2 x Logfile Objects 
 					1 x PoliceLogfile extends LogFile
 					1 x SecurityLogfile extends Logfile
+1 x Address Object
+1 x Date Object
 1 x MAIN class
 			Provide a Text UI to manage entry / navigation 
+
+NOTES: Im considering making an object for both address and date too - it would make things a lot
+easier when push comes to shove.
+
+for what its worth ive gone and created a draft UML diagram of the classes DRAFT
+http://yuml.me/22f50a62
