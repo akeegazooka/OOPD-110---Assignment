@@ -1,1 +1,7 @@
-This is a Test file from Git for windows
+File Specifications for the assignment
+
+2 x Logfile Objects 
+					1 x PoliceLogfile extends LogFile
+					1 x SecurityLogfile extends Logfile
+1 x MAIN class
+			Provide a Text UI to manage entry / navigation 
