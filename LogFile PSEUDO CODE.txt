@@ -1,0 +1,10 @@
+ASSIGNMENT LogFile PSEUDO CODE
+
+CLASS: LogFile
+
+CLASS FIELDS: numID, streetName, streetAddress, postCode, day, month, year, time
+
+[[CONSTRUCTORS]]
+
+DEFAULT:
+	
