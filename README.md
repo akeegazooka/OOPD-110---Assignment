@@ -8,10 +8,12 @@ OOPD 110 Assignment:
 
 ####Git Crash Course####
 assuming you have GIT installed etc.	
-To start off you need to clone the repository:
-	1. open up the GIT bash on windows or a terminal on Linux
-	2. cd to the directory you want to store the assignment folder
-	3. type ' git clone https://meelz@github.com/akeegazooka/OOPD-110---Assignment.git ' Without the quotes	
+To start off you need to clone the repository
+<ol>
+	<li> open up the GIT bash on windows or a terminal on Linux </li>
+	<li> cd to the directory you want to store the assignment folder </li>
+	<li> type ' git clone https://meelz@github.com/akeegazooka/OOPD-110---Assignment.git ' Without the quotes </li>	
+</ol>
 This results in you having a 1:1 copy of our current Assignment file/folder structure	
 Next up, how to use GIT push and pull	
 	
