@@ -1,0 +1,40 @@
+ASSIGNMENT PoliceLogFile Pseudo Code
+
+CLASS PoliceLogFile extends LogFile
+
+CLASSFIELDS: reportNumber
+
+CONSTRUCTORS:
+
+	DEFAULT:
+		IMPORT NONE 
+		EXPORT address of new PoliceLogFile Object
+
+			call super's DEFAULT CONSTRUCTOR
+			reportNumber = 1
+
+	ALTERNATE #1
+		IMPORT inIDnum, inAddress (Adress Object), inDateTime (DateTime Object) inReportNumber
+		EXPORT address of new PoliceLogFile Object
+
+			call super's ALTERNATE CONSTRUCTOR #1
+			valid = validate(inReportNumber)
+			IF (valid)
+				reportNumber = inReportNumber
+			ELSE
+				OUTPUT error
+				set reportNumber to -1
+			ENDIF
+
+	ALTERNATE #2
+		IMPORT inPoliceLogFile
+		EXPORT address of new PoliceLogFile Object
+
+			IDnum = inPoliceLogFile.getIDnum
+			dateTime = inPoliceLogFile.getDateTime
+			address = inPoliceLogFile.getAddress
+			reportNumber = inPoliceLogFile.getReportNumber
+			
+
+
+
