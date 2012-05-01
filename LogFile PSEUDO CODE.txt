@@ -2,9 +2,97 @@ ASSIGNMENT LogFile PSEUDO CODE
 
 CLASS: LogFile
 
-CLASS FIELDS: numID, streetName, streetAddress, postCode, day, month, year, time
+CLASS FIELDS: numID, Address (Address Object), DateTime (DateTime Object)
 
 [[CONSTRUCTORS]]
 
 DEFAULT:
+	IMPORT NONE
+	EXPORT address of new LogFile Object
+
+		IDnum = 1111
+		Address = new Address Object
+		DateTime = new DateTime object
+
+	ALTERNATE #1 
+		IMPORT inIDnum, inAddress (Adress Object), inDateTime (DateTime Object)
+		EXPORT address of new LogFile object
+
+			IDnum = 1111
+			Address = new address Object
+			DateTime = new DateTime Object
+
+			IDnum = genID
+			Address = new Address object with inAddress
+			DateTime = new DateTime Object with inDateTime
+
+
+	ALTERNATE #2
+		IMPORT inLogFile (LogFile Object)
+		EXPORT address of new LogFile Object
+
+			IDnum = inLogFile.getIDnum
+			Address = inLogFile.getAddress
+			DateTime = inLogFile.getDateTime
+
+
+MUTATORS:
 	
+	setIDnum
+		IMPORT inIDnum
+		EXPORT NONE
+
+			IDnum = inIDnum
+
+	setAddress
+		IMPORT inAddress (Address Object)
+		EXPORT NONE
+
+			Address = new Address <-- inAddress
+
+	setDateTime
+		IMPORT inDateTime (DateTime Object)
+		EXPORT NONE
+
+			DateTime = new DateTime <-- inDateTime
+
+
+ACCESSORS:
+	
+	getIDnum
+		IMPORT NONE
+		EXPORT IDnum
+
+
+	getAddress
+		IMPORT NONE
+		EXPORT Address (Address Object)
+		
+	getDateTime
+		IMPORT NONE
+		EXPORT DateTime (DateTime Object)
+
+
+IMPERATIVE METHODS
+
+	genID
+		IMPORT textFile
+		EXPORT IDnum
+
+			FOR 1 to TextLines step 1
+				read first number
+				store number
+				skip to next line
+			ENDFOR
+
+			IDnum = number + 1
+
+
+
+	
+
+
+	
+
+
+

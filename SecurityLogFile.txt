@@ -1,0 +1,34 @@
+ASSIGNMENT SecurityLogFile PSEUDO CODE
+
+	CLASS: SecurityLogFile extends LogFile
+
+		CLASSFIELDS: findingsStr (String Object)
+
+CONSTRUCTORS
+	
+	DEFAULT
+
+		call super's DEFAULT CONSTRUCTOR
+		findingsStr = "NULL"
+
+	ALTERNATE #1
+		IMPORT inIDnum, inFindingStr (String Object), inAddress(Address Object), inDateTime(DateTime Object)
+		EXPORT address of new SecurityLogFile Object
+
+			call super's ALTERNATE CONSTRUCTOR #1 with inAddress, inDateTime, inIDnum
+			findingStr = inFindingStr
+
+MUTATORS
+
+		setFindingStr
+			IMPORT inFindingStr
+			EXPORT NONE
+
+				IF inFindingStr != ""
+					findingStr = inFindingStr
+
+ACCESSORS
+		
+	getFindingStr
+		IMPORT NONE
+		EXPORT findingStr
