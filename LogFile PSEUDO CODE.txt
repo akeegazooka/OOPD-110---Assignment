@@ -10,7 +10,7 @@ DEFAULT:
 	IMPORT NONE
 	EXPORT address of new LogFile Object
 
-		numID = 1111
+		IDnum = 1111
 		Address = new Address Object
 		DateTime = new DateTime object
 
@@ -22,7 +22,7 @@ DEFAULT:
 			Address = new address Object
 			DateTime = new DateTime Object
 
-			IDnum = genID <-- inIDnum
+			IDnum = genID
 			Address = new Address object with inAddress
 			DateTime = new DateTime Object with inDateTime
 
@@ -74,6 +74,20 @@ ACCESSORS:
 
 
 IMPERATIVE METHODS
+
+	genID
+		IMPORT textFile
+		EXPORT IDnum
+
+			FOR 1 to TextLines step 1
+				read first number
+				store number
+				skip to next line
+			ENDFOR
+
+			IDnum = number + 1
+
+
 
 	
 
