@@ -2,9 +2,31 @@ ASSIGNMENT LogFile PSEUDO CODE
 
 CLASS: LogFile
 
-CLASS FIELDS: numID, streetName, streetAddress, postCode, day, month, year, time
+CLASS FIELDS: numID, Address (Address Object), DateTime (DateTime Object)
 
 [[CONSTRUCTORS]]
 
 DEFAULT:
-	
+	IMPORT NONE
+	EXPORT address of new LogFile Object
+
+		numID = 1111
+		Address = new Address Object
+		DateTime = new DateTime object
+
+	ALTERNATE #1 
+		IMPORT inIDnum, inAddress (Adress Object), inDateTime (DateTime Object)
+		EXPORT address of new LogFile object
+
+			IDnum = 1111
+			Address = new address Object
+			DateTime = new DateTime Object
+
+			IDnum = genID <-- inIDnum
+			Address = new Address object with inAddress
+			DateTime = new DateTime Object with inDateTime
+
+
+	ALTERNATE #2
+		IMPORT inLogFile (LogFile Object)
+		
