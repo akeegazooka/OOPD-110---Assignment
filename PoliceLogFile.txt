@@ -30,11 +30,35 @@ CONSTRUCTORS:
 		IMPORT inPoliceLogFile
 		EXPORT address of new PoliceLogFile Object
 
-			IDnum = inPoliceLogFile.getIDnum
-			dateTime = inPoliceLogFile.getDateTime
-			address = inPoliceLogFile.getAddress
+			call super's ALTERNATE CONSTRUCTOR #2
 			reportNumber = inPoliceLogFile.getReportNumber
-			
+
+MUTATORS
+
+		setReportNumber
+			IMPORT inReportNumber
+			EXPORT NONE
+
+				valid = validate(inReportNumber)
+				IF (valid)
+					reportNumber = inReportNumber
+				ENDIF
+
+ACCESSORS
+		
+	getReportNumber
+		IMPORT NONE
+		EXPORT reportNumber
+
+
+IMPERATIVES
+
+	validate
+		IMPORT number
+		EXPORT valid
+
+			valid = (number > 0)
+	
 
 
 

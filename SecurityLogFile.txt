@@ -1,0 +1,13 @@
+ASSIGNMENT SecurityLogFile PSEUDO CODE
+
+	CLASS: SecurityLogFile extends LogFile
+
+		CLASSFIELDS: findingsStr (String Object)
+
+CONSTRUCTORS
+	
+	DEFAULT
+
+		call super's DEFAULT CONSTRUCTOR
+		findingsStr = "NULL"
+		
