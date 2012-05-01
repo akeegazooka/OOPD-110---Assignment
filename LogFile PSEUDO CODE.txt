@@ -29,4 +29,56 @@ DEFAULT:
 
 	ALTERNATE #2
 		IMPORT inLogFile (LogFile Object)
+		EXPORT address of new LogFile Object
+
+			IDnum = inLogFile.getIDnum
+			Address = inLogFile.getAddress
+			DateTime = inLogFile.getDateTime
+
+
+MUTATORS:
+	
+	setIDnum
+		IMPORT inIDnum
+		EXPORT NONE
+
+			IDnum = inIDnum
+
+	setAddress
+		IMPORT inAddress (Address Object)
+		EXPORT NONE
+
+			Address = new Address <-- inAddress
+
+	setDateTime
+		IMPORT inDateTime (DateTime Object)
+		EXPORT NONE
+
+			DateTime = new DateTime <-- inDateTime
+
+
+ACCESSORS:
+	
+	getIDnum
+		IMPORT NONE
+		EXPORT IDnum
+
+
+	getAddress
+		IMPORT NONE
+		EXPORT Address (Address Object)
 		
+	getDateTime
+		IMPORT NONE
+		EXPORT DateTime (DateTime Object)
+
+
+IMPERATIVE METHODS
+
+	
+
+
+	
+
+
+
